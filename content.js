@@ -15,18 +15,45 @@ const Game = {
   foundWords: [],
   remainingWords: [],
   pangrams: beeData.today.pangrams,
+  currentRank: ''
 }
+
+const helper = document.createElement('div');
+const heading = document.createElement('h1');
+heading.innerHTML = 'Bee Keeper 🐝'
+css(heading, {
+  'text-align': 'center',
+  'font-size': '1em'
+})
+css(helper, {
+  'z-index': 20000,
+  'background-color': 'white',
+  border: '2px solid black',
+  'border-radius': '10%',
+  position: 'fixed',
+  bottom: '1em',
+  left: '1em',
+  width: '140px',
+  height: '140px',
+  padding: '.5em',
+  opacity: '0'
+})
+helper.appendChild(heading)
+document.body.appendChild(helper)
 
 /* Collate Game Data */
 function collate() {
   const foundWords = [];
 
-  let wordList = document.getElementsByClassName('sb-recent-words')[0].children
+  let wordList = document.getElementsByClassName('sb-recent-words')[0].children;
+  let currentRank = document.getElementsByClassName('sb-progress-rank')[0].innerText;
 
   Array.from(wordList).forEach(li => foundWords.push(li.innerText.toLowerCase()));
 
   Game.foundWords = foundWords;
   Game.remainingWords = Game.allWords.filter(word => !foundWords.includes(word));
+  Game.currentRank = currentRank.toLowerCase();
+
 }
 
 let enterButton = document.getElementsByClassName("hive-action hive-action__submit sb-touch-button")[0];
@@ -40,3 +67,9 @@ document.body.addEventListener('keydown', (e) => {
 })
 
 collate()
+
+function css(element, style) {
+  for (const prop in style) {
+    element.style[prop] = style[prop]
+  }
+}

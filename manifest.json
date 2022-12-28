@@ -7,9 +7,6 @@
     "action":{
         "default_title": "Bee Keeper"
     },
-    "background": {
-      "service_worker": "background.js"
-    },
     "permissions": ["storage", "activeTab", "scripting"],
     "content_scripts": [
       {
