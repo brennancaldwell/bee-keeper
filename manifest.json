@@ -1,0 +1,11 @@
+{
+    "name": "Bee Keeper",
+    "version": "1.0.0",
+    "description": "NYT Spelling Bee Helper",
+    "manifest_version": 3,
+    "author": "Brennan Caldwell",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Bee Keeper"
+    }
+}
