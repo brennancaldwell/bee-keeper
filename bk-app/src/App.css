@@ -23,6 +23,20 @@
   background-color: #dcdcdc;
 }
 
+#keeper-headline {
+  font-family: nyt-karnakcondensed !important;
+  font-size: 1.5em;
+  margin: 0.2em;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  padding: 0.2em;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
