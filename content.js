@@ -36,7 +36,7 @@ css(helper, {
   width: '140px',
   height: '140px',
   padding: '.5em',
-  opacity: '0'
+  opacity: '0.9'
 })
 helper.appendChild(heading)
 document.body.appendChild(helper)
