@@ -10,4 +10,8 @@ npm install
 npm run dev
 ```
 
-This will run the project locally with some spectacularly dumb dummy data.
+This will run the project locally with some spectacularly dumb dummy data. Before uploading changes to Chrome, it is necessary to run:
+
+```
+npm run build
+```
