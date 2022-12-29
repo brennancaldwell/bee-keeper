@@ -16,7 +16,7 @@
 }
 
 .keeper-logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #dcdcdc);
 }
 
 #bee-keeper-table tr:nth-child(even) {
@@ -35,13 +35,4 @@
   top: 0.2em;
   right: 0.2em;
   padding: 0.2em;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

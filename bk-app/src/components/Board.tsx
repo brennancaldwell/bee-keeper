@@ -46,7 +46,7 @@ function Board({ close }: BoardProps) {
       result.push(row)
     }
 
-    const lastLine = ['Σ', ...nums.map(num => words.filter(word => word.length === num).length), words.length];
+    const lastLine = ['Σ:', ...nums.map(num => words.filter(word => word.length === num).length), words.length];
     result.push(lastLine)
     return result;
 
@@ -107,9 +107,10 @@ function Board({ close }: BoardProps) {
                 <tr className="">
                   {row.map((el, elIdx) =>
                     rowIdx === 0
-                    ? <th className="px-2 py-1 ">{el}</th>
+                    ? <th className={`px-2 py-1`}>{el}</th>
                     : <td className={`px-2 py-1  ${(rowIdx === grid.length - 1
-                                    || elIdx === row.length - 1)
+                                    || elIdx === row.length - 1
+                                    || elIdx === 0)
                                     ? 'font-bold'
                                     : ''}`}>{el}</td>
                   )}
