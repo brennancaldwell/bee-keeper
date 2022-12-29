@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {
         open
-        ? <Board onClick={() => setOpen(!open)}/>
+        ? <Board close={() => setOpen(!open)}/>
         : <img src={beeKeeperLogo}  className="keeper-logo" alt="Bee Keeper logo" onClick={() => setOpen(!open)}/>
       }
     </div>

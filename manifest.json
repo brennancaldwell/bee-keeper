@@ -12,9 +12,9 @@
       "service_worker": "background.js"
     },
     "icons": {
-      "16": "/images/beehive-16.png",
-      "32": "/images/beehive-32.png",
-      "48": "/images/beehive-48.png",
-      "128": "/images/beehive-128.png"
+      "16": "/bk-app/src/assets/beehive-16.png",
+      "32": "/bk-app/src/assets/beehive-32.png",
+      "48": "/bk-app/src/assets/beehive-48.png",
+      "128": "/bk-app/src/assets/beehive-128.png"
     }
 }
