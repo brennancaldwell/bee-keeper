@@ -14,7 +14,7 @@ function Board({ close }: BoardProps) {
   const allLetters = beeData?.today.validLetters || ['b', 'i', 'l', 'o', 'g']
   const [ gridView, setGridView ] = useState<string>('all');
 
-  const remaining = useMemo(() => all.filter(word => !found?.includes(word)), [all, found])
+  const remaining = useMemo(() => all.filter(word => !found.includes(word)), [all, found])
 
   const grid = useMemo(() => {
     let words: string[];
@@ -61,7 +61,7 @@ function Board({ close }: BoardProps) {
         let wordList: HTMLCollection= document.getElementsByClassName('sb-recent-words')[0]?.children;
         let currentRank: string = document.getElementsByClassName('sb-progress-rank')[0]?.textContent?.toLowerCase() || '';
 
-        const foundWords: string[] = wordList ? Array.from(wordList).map(li => li.textContent?.toLowerCase() || '').filter(x => x !== '') : [];
+        const foundWords: string[] = wordList ? Array.from(wordList).map(li => li.className !== 'sb-placeholder-text' && li.textContent?.toLowerCase() || '').filter(x => x !== '') : [];
 
         setFound(foundWords)
         setCurrentRank(currentRank)
@@ -101,7 +101,7 @@ function Board({ close }: BoardProps) {
           <option value="found">Found</option>
         </select>
         <div className="m-4">
-          <table id="bee-keeper-table" className="mx-auto border-separate border-spacing-0 rounded w-full max-w-md border border-nyt-grey">
+          <table id="bee-keeper-table" className="mx-auto w-full max-w-md">
             {
               grid.map((row, rowIdx) =>
                 <tr className="">

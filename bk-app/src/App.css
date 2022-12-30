@@ -29,6 +29,14 @@
   margin: 0.2em;
 }
 
+#bee-keeper-table {
+  table-layout: separate;
+  border-spacing: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #dcdcdc;
+  border-collapse: separate;
+}
+
 .close {
   cursor: pointer;
   position: absolute;
