@@ -15,3 +15,9 @@ This will run the project locally with some spectacularly dumb dummy data. Befor
 ```
 npm run build
 ```
+
+## View
+
+![Bee Keeper Icon](./assets/BeeKeeperClosed.png)
+
+![Bee Keeper Open](./assets/BeeKeeperRemaining.png)
