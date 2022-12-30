@@ -30,7 +30,7 @@ function Board({ close }: BoardProps) {
         break;
     }
 
-    const nums = Array.from(new Set(all.map(word => word.length))).sort();
+    const nums = Array.from(new Set(all.map(word => word.length))).sort((a, b) => a - b);
     const firstLine = [' ', ...nums, 'Σ'];
     const letters = allLetters.sort();
     const result = [firstLine];
