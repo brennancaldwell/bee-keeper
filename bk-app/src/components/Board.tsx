@@ -79,15 +79,24 @@ function Board({ close }: BoardProps) {
       }, 100)
     }
 
+    function closeBoard(e: KeyboardEvent) {
+      if (e.key === "Esc" || e.key === "Escape") {
+        close()
+      }
+    }
+
     const enterButton = document.getElementsByClassName("hive-action hive-action__submit sb-touch-button")[0];
 
     enterButton && enterButton.addEventListener('click', play)
 
     document.body.addEventListener('keydown', play)
 
+    document.body.addEventListener('keydown', closeBoard);
+
     return () => {
       enterButton && enterButton.removeEventListener('click', play);
       document.body.removeEventListener('keydown', play);
+      document.body.removeEventListener('keydown', closeBoard)
     }
   }, [])
 
